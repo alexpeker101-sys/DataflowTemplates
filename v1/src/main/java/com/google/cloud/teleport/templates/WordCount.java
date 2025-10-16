@@ -65,7 +65,8 @@ public class WordCount {
       }
 
       // Split the line into words.
-      String[] words = c.element().split("[^a-zA-Z']+");
+      //String[] words = c.element().split("[^a-zA-Z']+");
+      String[] words = c.element().split("[.,!?;\\r\\n :'\"-]+");
 
       // Output each word encountered into the output PCollection.
       for (String word : words) {
